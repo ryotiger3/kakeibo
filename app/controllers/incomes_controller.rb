@@ -28,7 +28,7 @@ class IncomesController < ApplicationController
   def update
     @income = Income.find(params[:id])
     @income.assign_attributes(params[:income])
-    if income.save
+    if @income.save
         redirect_to @income, notice: "収入科目を登録しました"
     else
         render "new"
