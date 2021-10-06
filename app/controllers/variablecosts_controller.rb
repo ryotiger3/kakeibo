@@ -36,7 +36,7 @@ class VariablecostsController < ApplicationController
   end
 
   def destroy
-    @variablecost = Variablecost.find([:id])
+    @variablecost = Variablecost.find(params[:id])
     @variablecost.destroy
     redirect_to :variablecosts, notice: "科目を削除しました"
   end
